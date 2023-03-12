@@ -1,0 +1,47 @@
+local prefix = "-"
+local LPlayer = game.Players.LocalPlayer
+LPlayer.Chatted:Connect(function(msg)
+	msg = msg:lower()
+	if string.sub(msg,1,3) == "/e " then
+		msg = string.sub(msg,4)
+	end
+	if string.sub(msg,1,1) == prefix then
+		local cmd
+		local space = string.find(msg," ")
+		if space then
+			cmd = string.sub(msg,2,space-1)
+		else
+			cmd = string.sub(msg,2)
+		end
+		
+		if cmd == "Core V4" then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/jjjiiw/core-V4/main/core%20V4"))();
+		end
+		if cmd == "anti-crash" then
+			if cht match("clone all") then
+                game.Players:Chat("reset all")
+                wait(0.2)
+                game.Players:chat(h \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n someone tried to Crash XD nope lol \n \n \n \n \n)
+		end
+		
+	end
+end)
+
+function GetPlayer(String)
+    local plr
+    local strl = String:lower()
+        for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Name:lower():sub(1, #String) == String:lower() then
+                plr = v
+            end 
+        end
+        if String == "me" then
+                plr = game.Players.LocalPlayer
+            end
+        if String == "" or String == " " then
+           plr = nil
+        end
+    return plr
+end
+
+print("hello world script is runni")
